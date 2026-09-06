@@ -6,17 +6,19 @@ body {
     color: #333;
 }
 
+/* --- Mobile-First (Base Styles) --- */
+
 /* Header */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    height: 80px;
+    padding: 15px 20px;
 }
 
 .logo-circle {
-    background-color: #004d40; /* Verde escuro */
+    background-color: #004d40;
+    /* Verde escuro */
     color: white;
     width: 40px;
     height: 40px;
@@ -29,12 +31,14 @@ body {
 }
 
 .btn-download {
-    background-color: #2ecc71; /* Verde */
+    background-color: #2ecc71;
+    /* Verde */
     color: white;
-    padding: 10px 25px;
+    padding: 8px 18px;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 500;
+    font-size: 0.9rem;
     transition: background-color 0.3s;
 }
 
@@ -45,47 +49,103 @@ body {
 /* Hero Section */
 .hero {
     display: flex;
-    height: 90vh;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 50px;
+    flex-direction: column;
+    /* Pilha vertical no mobile */
+    padding: 40px 20px;
+    gap: 40px;
+    text-align: center;
 }
 
-.hero-left, .hero-center, .hero-right {
-    flex: 1;
+.hero-left,
+.hero-center,
+.hero-right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    /* Centralizado no mobile */
 }
 
 .hero-left h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.4;
     color: #555;
-    max-width: 300px;
-}
-
-.hero-center {
-    align-items: center;
+    margin: 0;
 }
 
 .hero-center .hero-image {
-    max-height: 80vh;
-    width: auto;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
-}
-
-.hero-right {
-    align-items: flex-end;
+    max-width: 80%;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
 }
 
 .key-points {
     list-style: none;
     padding: 0;
-    font-size: 1.2rem;
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: left;
 }
 
 .key-points li {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+/* --- Desktop Breakpoint (>= 900px) --- */
+@media (min-width: 900px) {
+    .header {
+        padding: 20px 50px;
+        height: 80px;
+    }
+
+    .btn-download {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    .hero {
+        flex-direction: row;
+        /* Lado a lado no desktop */
+        height: 90vh;
+        padding: 0 50px;
+        gap: 0;
+        text-align: left;
+    }
+
+    .hero-left,
+    .hero-center,
+    .hero-right {
+        flex: 1;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .hero-left {
+        align-items: flex-end;
+        /* Ajuste solicitado */
+        text-align: right;
+    }
+
+    .hero-left h1 {
+        font-size: 1.8rem;
+        max-width: 300px;
+    }
+
+    .hero-center {
+        align-items: center;
+    }
+
+    .hero-center .hero-image {
+        max-height: 80vh;
+        max-width: none;
+    }
+
+    .hero-right {
+        align-items: center;
+        /* Ajuste solicitado */
+    }
+
+    .key-points {
+        font-size: 1.2rem;
+    }
 }
