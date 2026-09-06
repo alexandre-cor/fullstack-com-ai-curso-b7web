@@ -1,0 +1,91 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    height: 80px;
+}
+
+.logo-circle {
+    background-color: #004d40; /* Verde escuro */
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.btn-download {
+    background-color: #2ecc71; /* Verde */
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #27ae60;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.hero-left, .hero-center, .hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-left h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #555;
+    max-width: 300px;
+}
+
+.hero-center {
+    align-items: center;
+}
+
+.hero-center .hero-image {
+    max-height: 80vh;
+    width: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+}
+
+.hero-right {
+    align-items: flex-end;
+}
+
+.key-points {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.key-points li {
+    margin-bottom: 20px;
+}
