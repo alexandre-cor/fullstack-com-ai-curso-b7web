@@ -29,6 +29,8 @@ FILE: assets/style.css
 
 :root {
   --background-color: #fcffe6;
+  --background-primary: #ccdeb8;
+  --background-second: #9cbd8b;
 
   --font-family: 'Roboto', Arial, sans-serif;
   --font-color: #555555;
@@ -181,7 +183,7 @@ header nav {
 
   width: 100%;
   padding: 20px 60px 100px 60px;
-  background: #ccdeb8;
+  background: var(--background-primary);
   .feature-image img {
     max-height: 500px;
   }
@@ -207,17 +209,45 @@ header nav {
 }
 
 .feature-items-reverse {
-  background: #fcffe6;
+  background: var(--background-color);
 
   .feature-image {
-    grid-column: 2/3;
+    order: 1;
   }
 
   .feature-text {
-    grid-column: 1/2;
-    grid-row: 1/2;
+    order: 0;
   }
 }
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 80px 60px;
+
+  p {
+    font-size: 0.9rem;
+    color: var(--font-color);
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 60px;
+  font-size: 0.9rem;
+  background: var(--background-second);
+  color: var(--font-color);
+}
+
+
 
 
 
