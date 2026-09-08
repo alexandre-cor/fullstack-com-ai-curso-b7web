@@ -1,0 +1,461 @@
+Directory structure:
+└── projeto-landing-page/
+    ├── index.html
+    ├── style.css
+    ├── __MACOSX/
+    │   ├── ._images
+    │   ├── ._index.html
+    │   ├── ._style.css
+    │   └── images/
+    │       └── ._.DS_Store
+    └── docs/
+        ├── feedback.md
+        └── plan.md
+
+================================================
+FILE: index.html
+================================================
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-circle">F</div>
+        </div>
+        <a href="#" class="btn-download">Download</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-left">
+                <h1>O app perfeito para acompanhar sua vida fitness.</h1>
+            </div>
+            <div class="hero-center">
+                <img src="images/print_1.png" alt="Print do App" class="hero-image">
+            </div>
+            <div class="hero-right">
+                <ul class="key-points">
+                    <li>❤️ Saúde</li>
+                    <li>🏃 Exercício</li>
+                    <li>🤷‍♂️ Amigos</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-item">
+                <div class="feature-image">
+                    <img src="images/print_2.png" alt="Contagem de calorias">
+                </div>
+                <div class="feature-text">
+                    <h2>Controle suas calorias</h2>
+                    <p>Mantenha o registro detalhado de tudo o que você consome e queima durante o dia de forma simples e intuitiva.</p>
+                    <p>Com nosso banco de dados extensivo, você pode encontrar milhares de alimentos e atividades físicas para registrar com precisão sua rotina.</p>
+                    <p>Visualize gráficos de progresso diário e semanal para entender melhor seus hábitos alimentares e ajustar sua dieta conforme necessário.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-text">
+                    <h2>Exercícios específicos</h2>
+                    <p>Encontre rotinas adaptadas para corrida, musculação e diversas outras modalidades para atingir seus objetivos.</p>
+                    <p>Nossos treinos são elaborados por profissionais qualificados, garantindo que você execute cada movimento com segurança e eficiência máxima.</p>
+                    <p>Seja você um iniciante ou um atleta avançado, o app ajusta a intensidade das atividades para que você sempre tenha um desafio à altura.</p>
+                </div>
+                <div class="feature-image">
+                    <img src="images/print_3.png" alt="Exercícios específicos">
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-image">
+                    <img src="images/print_4.png" alt="Compartilhamento com amigos">
+                </div>
+                <div class="feature-text">
+                    <h2>Compartilhe sua evolução</h2>
+                    <p>Conecte-se com seus amigos, acompanhe o progresso deles e receba incentivo para continuar firme na sua jornada.</p>
+                    <p>A comunidade é um pilar fundamental para manter a motivação. Participe de desafios em grupo e conquiste medalhas exclusivas.</p>
+                    <p>Compartilhe suas conquistas nas redes sociais diretamente do aplicativo e inspire outras pessoas a buscarem um estilo de vida mais saudável.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <a href="#" class="btn-download btn-large">Download</a>
+            <p>Totalmente gratuito</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Todos os direitos reservados</p>
+    </footer>
+
+</body>
+
+</html>
+
+
+================================================
+FILE: style.css
+================================================
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* --- Mobile-First (Base Styles) --- */
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo-circle {
+    background-color: #004d40;
+    /* Verde escuro */
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.btn-download {
+    background-color: #2ecc71;
+    /* Verde */
+    color: white;
+    padding: 8px 18px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #27ae60;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    /* Pilha vertical no mobile */
+    padding: 40px 20px;
+    gap: 40px;
+    text-align: center;
+}
+
+.hero-left,
+.hero-center,
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centralizado no mobile */
+}
+
+.hero-left h1 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #555;
+    margin: 0;
+}
+
+.hero-center .hero-image {
+    max-width: 80%;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+.key-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.key-points li {
+    margin-bottom: 15px;
+}
+
+/* Features Section */
+.features {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-item:nth-child(2) {
+    flex-direction: column-reverse;
+}
+
+.feature-image img {
+    max-width: 100%;
+
+    max-height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-text h2 {
+    font-size: 1.8rem;
+    color: #004d40;
+    margin-bottom: 15px;
+}
+
+.feature-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+
+    max-width: 600px;
+    margin-bottom: 15px;
+}
+
+/* CTA Section */
+.cta {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.cta p {
+    margin-top: 15px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* --- Desktop Breakpoint (>= 900px) --- */
+@media (min-width: 900px) {
+    .header {
+        padding: 20px 50px;
+        height: 80px;
+    }
+
+    .btn-download {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+
+    .hero {
+        flex-direction: row;
+        /* Lado a lado no desktop */
+        height: 90vh;
+        padding: 0 50px;
+        gap: 0;
+        text-align: left;
+    }
+
+    .hero-left,
+    .hero-center,
+    .hero-right {
+        flex: 1;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .hero-left {
+        align-items: flex-end;
+        /* Ajuste solicitado */
+        text-align: right;
+    }
+
+    .hero-left h1 {
+        font-size: 1.8rem;
+        max-width: 300px;
+    }
+
+    .hero-center {
+        align-items: center;
+    }
+
+    .hero-center .hero-image {
+        max-height: 80vh;
+        max-width: none;
+    }
+
+    .hero-right {
+        align-items: center;
+        /* Ajuste solicitado */
+    }
+
+    .key-points {
+        font-size: 1.2rem;
+    }
+
+    /* Features Desktop */
+    .features {
+        padding: 100px 50px;
+    }
+
+    .feature-item {
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+        text-align: left;
+    }
+
+    .feature-item:nth-child(even) {
+        flex-direction: row;
+        /* Já está definido no HTML com a ordem invertida para o segundo item */
+    }
+
+    .feature-text {
+        flex: 1;
+
+        max-width: 550px;
+    }
+
+    .feature-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .feature-image img {
+        max-height: 500px;
+    }
+}
+
+
+================================================
+FILE: __MACOSX/._images
+================================================
+[Binary file]
+
+
+================================================
+FILE: __MACOSX/._index.html
+================================================
+[Binary file]
+
+
+================================================
+FILE: __MACOSX/._style.css
+================================================
+[Binary file]
+
+
+================================================
+FILE: __MACOSX/images/._.DS_Store
+================================================
+    Mac OS X            	   2   F      x            @                        ATTR       x   x                    
+
+
+================================================
+FILE: docs/feedback.md
+================================================
+#Solicitação de Ajustes na Landing Page
+
+Rigorosamente siga estas diretrizes de CSS baseadas nos meus ajustes:
+1. Arquitetura Mobile-First: Escreva primeiro o CSS para telas de celular.
+2. Breakpoint de Desktop: Use a Media Query @media (min-width: 900px) para aplicar as regras de telas grandes.
+3. No layout de Desktop (telas >= 900px):
+   - Aplique "align-items: center;" na classe `.hero-right`.
+   - Aplique "align-items: flex-end;" na classe `.hero-left`.
+
+
+================================================
+FILE: docs/plan.md
+================================================
+# Projeto de Landing Page para App fitness
+
+Página com fundo branco e fonte Roboto como principal.
+Objetivo é ter uma landing page clean, branca e sofisticada.
+
+## Seção HEADER:
+
+Logo no canto esquerdo
+- A logo é um F em um círculo (feito com CSS)
+- o fundo do círculo é VERDE ESCURO
+
+Botão de download no canto direito
+- fundo verde, cor branca
+- borda arredondada
+
+## Seção HERO:
+
+A hero deve ter altura 90vh, divido em 3 áreas horizontais:
+
+Esquerda:
+Apenas a headline, sem ser grande demais, sem destaque (o destaque é o print do app no meio).
+"O app perfeito para acompanhar sua vida fitness."
+
+Centro:
+Em destaque a imagem images/print_1.png que é um print do app.
+
+Direita:
+Uma lista de pontos-chave sobre o app:
+- ❤️ Saúde
+- 🏃 Exercício
+- 🤷‍♂️ Amigos
+
+## Seção de FUNCIONALIDADES:
+
+Vão ser usadas as imagens images/print_2.png, images/print_3.png e images/print_4.png que serão exibidas da seguinte forma:
+- print / texto
+- texto / print
+- print / texto
+
+Ou seja, irá alternar entre o print na esquerda e um texto explicativo na direita, vice-versa.
+
+Descrição breve de cada print para você gerar um texto adequado:
+- print_2.png = Contagem de calorias
+- print_3.png = Exercícios específicos (corrida, musculação, etc)
+- print_4.png = Compartilhamento com amigos
+
+## Seção de CTA (call-to-action):
+Botão grande de download com um texto abaixo dele destacando:
+"Totalmente gratuito"
+
+## Seção de Rodapé:
+Apenas com o texto "Todos os direitos reservados"
+
