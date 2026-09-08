@@ -7,52 +7,7 @@ Directory structure:
 ================================================
 FILE: assets/index.html
 ================================================
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APP Saúde</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <header>
-    <nav>
-      <div class="logo">
-        <span>F</span>
-      </div>
-
-      <div class="btn-download">
-        <a href="">Download</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section id="hero">
-      <div class="hero-left">
-        <h1>O app perfeito para acompanhar sua vida fitness.</h1>
-      </div>
-      <div class="hero-center">
-        <img src="../images/print_1.png" alt="Print do App">
-      </div>
-      <div class="hero-right">
-        <ul>
-          <li>❤️ Saúde</li>
-          <li>🏃 Exercício</li>
-          <li>🤷‍♂️ Amigos</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-</body>
-
-</html>
+[Binary file]
 
 
 ================================================
@@ -74,11 +29,16 @@ FILE: assets/style.css
 
 :root {
   --background-color: #fcffe6;
+
+  --font-family: 'Roboto', Arial, sans-serif;
+  --font-color: #555555;
+
+  --border-radius: 25px;
+
   --color-button: #2ecc71;
   --color-logo: #3d7b30;
 
-  --font-family: 'Roboto', Arial, sans-serif;
-  --font-color: #fcffe6;
+  --font-color-logo: #fcffe6;
   --font-size-logo: 2.625rem;
   --font-weight-logo: 800;
 
@@ -91,8 +51,8 @@ FILE: assets/style.css
   --font-color-h1: #555555;
   --line-height-h1: 1.4;
 
-
-  --border-radius: 12px
+  --font-color-h2: #004d40;
+  --font-size-h2: 1.8rem;
 }
 
 body {
@@ -104,7 +64,7 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 60px;
 }
 
 .logo {
@@ -121,18 +81,18 @@ header nav {
     font-size: var(--font-size-logo);
     font-weight: var(--font-weight-logo);
 
-    color: var(--font-color);
+    color: var(--font-color-logo);
   }
 }
 
 .btn-download a {
   display: block;
   background: var(--color-button);
-  padding: .5rem 1rem;
+  padding: 0.625rem 1.5625rem;
   border: none;
   border-radius: var(--border-radius);
   outline: none;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   filter: brightness(1);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -141,7 +101,7 @@ header nav {
   font-family: var(--font-family);
   font-size: var(--font-size-btn);
   font-weight: 500;
-  color: var(--font-color);
+  color: var(--font-color-logo);
 
   &:hover {
     transform: translateY(-2px);
@@ -151,7 +111,7 @@ header nav {
 
   &:active {
     transform: translateY(0);
-    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     filter: brightness(1);
   }
 
@@ -163,11 +123,15 @@ header nav {
 
 
 #hero {
-  height: calc(100vh - 100px);
+  height: calc(98vh - 100px);
   padding: 0 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .btn-download {
+    display: none;
+  }
 }
 
 .hero-left,
@@ -205,6 +169,55 @@ header nav {
   gap: 1rem;
 }
 
+#feature {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.feature-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+
+  width: 100%;
+  padding: 20px 60px 100px 60px;
+  background: #ccdeb8;
+  .feature-image img {
+    max-height: 500px;
+  }
+
+  .feature-text {
+    max-width: 450px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  h2 {
+    color: var(--font-color-h2);
+    font-size: 1.8rem;
+  }
+
+  p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: var(--font-color);
+  }
+}
+
+.feature-items-reverse {
+  background: #fcffe6;
+
+  .feature-image {
+    grid-column: 2/3;
+  }
+
+  .feature-text {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
 
 
 
