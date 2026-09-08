@@ -113,7 +113,8 @@ body {
 
 .feature-image img {
     max-width: 100%;
-    max-height: 400px;
+
+    max-height: 500px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -128,7 +129,9 @@ body {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #666;
-    max-width: 400px;
+
+    max-width: 600px;
+    margin-bottom: 15px;
 }
 
 /* CTA Section */
@@ -236,7 +239,8 @@ body {
 
     .feature-text {
         flex: 1;
-        max-width: 450px;
+
+        max-width: 550px;
     }
 
     .feature-image {
